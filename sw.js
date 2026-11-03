@@ -1,4 +1,4 @@
-const CACHE_NAME = "shao-pdf-v2";
+const CACHE_NAME = "shao-pdf-v3";
 
 const FILES_TO_CACHE = [
     "./",
