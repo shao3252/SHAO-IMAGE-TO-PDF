@@ -90,6 +90,23 @@
         <span>Simple • Fast • Free</span>
     </footer>
 
+
+    <!-- CROP MODAL -->
+    <div id="cropModal" class="crop-modal" hidden>
+        <div class="crop-toolbar">
+            <button id="cropCancel" class="crop-tool-btn">CANCEL</button>
+            <span class="crop-title">Crop Image</span>
+            <button id="cropApply" class="crop-tool-btn apply">APPLY</button>
+        </div>
+        <div id="cropStage" class="crop-stage">
+            <img id="cropImage" alt="Crop preview">
+            <div id="cropBox" class="crop-box">
+                <div id="cropHandle" class="crop-handle"></div>
+            </div>
+        </div>
+        <div class="crop-hint">Drag box to move • Drag corner to resize</div>
+    </div>
+
     <script src="script.js"></script>
     <script>
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
