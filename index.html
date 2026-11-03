@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#09090f">
+
+    <title>SHAO PDF</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            SHAO<span>PDF</span>
+        </div>
+        <div class="status">● READY</div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-icon">📄</div>
+            <h1>Image to <span>PDF</span></h1>
+            <p>Convert your images into PDF documents easily.</p>
+        </section>
+
+        <section class="upload-section">
+
+            <label for="imageInput" class="upload-box">
+                <div class="upload-icon">＋</div>
+                <h3>Select Images</h3>
+                <p>Tap here to choose images from your gallery</p>
+                <span>JPG • PNG • WEBP</span>
+            </label>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                multiple
+                hidden
+            >
+
+        </section>
+
+        <section class="selected-section">
+            <div class="section-heading">
+                <h2>Selected Images</h2>
+                <span id="imageCount">0 Images</span>
+            </div>
+
+            <div id="imageList" class="image-list">
+                <div class="empty-state">
+                    Your selected images will appear here.
+                </div>
+            </div>
+        </section>
+
+        <section class="settings">
+            <h2>PDF Settings</h2>
+
+            <label for="pageSize">Page Size</label>
+            <select id="pageSize">
+                <option value="a4">A4</option>
+                <option value="letter">Letter</option>
+                <option value="fit">Fit to Image</option>
+            </select>
+
+            <label for="orientation">Orientation</label>
+            <select id="orientation">
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+            </select>
+        </section>
+
+        <button id="convertBtn" class="convert-btn">
+            CONVERT TO PDF →
+        </button>
+
+        <div id="message" class="message"></div>
+
+    </main>
+
+    <footer>
+        <p>SHAO PDF © 2026</p>
+        <span>Simple • Fast • Free</span>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(function () {
+            console.log("Service worker registration skipped.");
+        });
+    });
+}
+</script>
+
+</body>
+</html>

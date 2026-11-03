@@ -1,0 +1,19 @@
+{
+  "name": "SHAO PDF - Image to PDF Converter",
+  "short_name": "SHAO PDF",
+  "description": "Convert images into PDF documents easily.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#09090f",
+  "theme_color": "#09090f",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
